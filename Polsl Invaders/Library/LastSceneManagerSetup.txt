@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Mordownia.unity
+- path: Assets/Scene/Mordownia.unity
   isLoaded: 1
   isActive: 1
