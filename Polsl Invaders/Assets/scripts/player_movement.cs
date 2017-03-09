@@ -15,7 +15,7 @@ public class player_movement : MonoBehaviour {
 
        
 
-        transform.Translate(new Vector3(0, Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime, 0));
+        transform.Translate(new Vector3( Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime, 0, 0));
 	
 	}
 }
