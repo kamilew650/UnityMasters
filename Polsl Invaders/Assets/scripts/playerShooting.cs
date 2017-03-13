@@ -11,10 +11,11 @@ public class playerShooting : MonoBehaviour {
     float coolDownTimer = 0;
 
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+    void Start() {
+        bulletPrefab.gameObject.tag = "Bullet";
+    }
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,9 +27,10 @@ public class playerShooting : MonoBehaviour {
             coolDownTimer = fireDelay;
             Vector3 offset = transform.rotation * bulletOffset;
 
-            Instantiate(bulletPrefab, transform.position+offset, transform.rotation);
+            GameObject Bullet = Instantiate(bulletPrefab, transform.position+offset, transform.rotation);
         }
 	
 	}
-
 }
+
+
