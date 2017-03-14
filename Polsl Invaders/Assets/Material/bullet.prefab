@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212000010813806304}
   - component: {fileID: 114000010775514184}
   - component: {fileID: 50105431721251380}
+  - component: {fileID: 70283439442827116}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -50,18 +51,32 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011513093404}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &70283439442827116
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011513093404}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.19, y: 0.45}
+  m_Direction: 0
 --- !u!114 &114000010775514184
 MonoBehaviour:
   m_ObjectHideFlags: 1

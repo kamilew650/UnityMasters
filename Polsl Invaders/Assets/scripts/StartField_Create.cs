@@ -25,11 +25,23 @@ public class StartField_Create : MonoBehaviour {
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
+        Debug.Log("triggered");
+        if (collider.gameObject.tag=="Bullet")
+        {
+            Destroy(collider.gameObject);
+        }
+    }
+
+/*    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("kolizja");
+
         if (collision.gameObject.tag == "Bullet")
         {
             Destroy(collision.gameObject);
         }
     }
+*/
 }

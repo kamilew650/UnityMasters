@@ -4,11 +4,7 @@ using System.Collections;
 public class move : MonoBehaviour {
 
     public float maxSpeed=10;
-	// Use this for initialization
-	void Start () {
-
 	
-	}
 
     void Update()
     {
