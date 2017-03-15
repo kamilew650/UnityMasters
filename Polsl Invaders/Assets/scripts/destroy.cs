@@ -10,6 +10,7 @@ public class destroy : MonoBehaviour {
         {
             Destroy(collider.gameObject);
             Destroy(gameObject);
+            GameController.addPoint();
         }
     }
 }

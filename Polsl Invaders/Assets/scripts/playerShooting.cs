@@ -6,7 +6,6 @@ public class playerShooting : MonoBehaviour {
 
     public GameObject bulletPrefab;
     public Vector3 bulletOffset = new Vector3(0, 5, 0);
-
     public float fireDelay = 0.5f;
     float coolDownTimer = 0;
 

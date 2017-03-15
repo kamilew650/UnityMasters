@@ -6,13 +6,15 @@ public class GameController : MonoBehaviour {
 
     public GameObject enemy;
     public GameObject boss;
+    public static int points;           //punkty
     public Vector3 spawnValues;
     public int enemyCount;              //ilosc przeciwnikow
     public float spawnWait;             //co ile sie maja pojawiac
     public float spawnStart;            //kiedy ma sie pojawic pierwszy
 	void Start () {
-
+        
         StartCoroutine(spawnWaves());
+        points = 0;
 		
 	}
 
@@ -30,9 +32,14 @@ public class GameController : MonoBehaviour {
         
             Instantiate(boss, new Vector3(0, spawnValues.y, spawnValues.z),  spawnRotation);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(Vector2.zero, new Vector2(150f, 200f)), points.ToString());
+    }
+
+    public static void addPoint()
+    {
+        points++;
+    }
 }

@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212243654305963432}
   - component: {fileID: 50661980908121694}
   - component: {fileID: 61909878502881434}
-  - component: {fileID: 114335656332782736}
   - component: {fileID: 114890548356616796}
+  - component: {fileID: 114997993765655198}
   m_Layer: 0
   m_Name: boss
   m_TagString: Enemy
@@ -78,18 +78,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.5500001, y: 0.56000006}
---- !u!114 &114335656332782736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1050650839528252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b34f9d538156948a5f7d9373e69e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: -7
 --- !u!114 &114890548356616796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,6 +89,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41221c7b11e67f34aa37bb9222900a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114997993765655198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050650839528252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d794e3fcf0c6e294aa49a1dc8d6794b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: -2
 --- !u!212 &212243654305963432
 SpriteRenderer:
   m_ObjectHideFlags: 1
