@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathZone : MonoBehaviour {
+public class DZone_D : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log("triggered");
-        if (collider.gameObject.tag == "Bullet")
+        if (collider.gameObject.tag == "Enemy")
         {
             Destroy(collider.gameObject);
         }

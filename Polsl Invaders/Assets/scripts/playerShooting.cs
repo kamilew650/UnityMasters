@@ -22,7 +22,7 @@ public class playerShooting : MonoBehaviour {
 
         coolDownTimer -= Time.deltaTime;
 
-        if(Input.GetButton("Fire1") && coolDownTimer<=0)
+        if(Input.GetButton("Jump") && coolDownTimer<=0)
         {
             coolDownTimer = fireDelay;
             Vector3 offset = transform.rotation * bulletOffset;
