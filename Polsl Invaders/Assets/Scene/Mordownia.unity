@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1678578080654248, guid: 6fec7cae3993c434a87fab32a21cba9d, type: 2}
+  boss: {fileID: 1050650839528252, guid: dc6103798d7cc8744a3b0920a978fac4, type: 2}
   spawnValues: {x: 3, y: 7, z: -2.45}
   enemyCount: 10
   spawnWait: 1
