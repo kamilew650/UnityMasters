@@ -22,15 +22,15 @@ public class GameController : MonoBehaviour {
     {
         yield return new WaitForSeconds(spawnStart);
         int i;
-        Quaternion spawnRotation = Quaternion.identity;
         for ( i = 0; i < enemyCount; i++)
         {
+            Quaternion spawnRotation = new Quaternion(0, 0, -180f, 0);
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
             Instantiate(enemy, spawnPosition, spawnRotation);
             yield return new WaitForSeconds(spawnWait);
         }
-        
-            Instantiate(boss, new Vector3(0, spawnValues.y, spawnValues.z),  spawnRotation);
+        Quaternion spawnRotation2 = new Quaternion(0, 0, -180f, 0);
+        Instantiate(boss, new Vector3(0, spawnValues.y, spawnValues.z),  spawnRotation2);
     }
 
     void OnGUI()
