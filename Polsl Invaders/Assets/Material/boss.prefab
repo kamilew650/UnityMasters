@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61909878502881434}
   - component: {fileID: 114890548356616796}
   - component: {fileID: 114997993765655198}
+  - component: {fileID: 114526218550156276}
   m_Layer: 0
   m_Name: boss
   m_TagString: Enemy
@@ -78,6 +79,21 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.5500001, y: 0.56000006}
+--- !u!114 &114526218550156276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050650839528252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2e8694293af2743804e2dd51cdb5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBulletPrefab: {fileID: 1058450831305846, guid: 03fd7875ad281f849b18b73547122fc5,
+    type: 2}
+  enemyBulletOffset: {x: 0, y: 1.5, z: 0}
+  fireDelay: 2
 --- !u!114 &114890548356616796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41221c7b11e67f34aa37bb9222900a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 15
 --- !u!114 &114997993765655198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d794e3fcf0c6e294aa49a1dc8d6794b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
-  leftRightSpeed: 2
+  maxSpeed: 0.75
+  leftRightSpeed: 1
 --- !u!212 &212243654305963432
 SpriteRenderer:
   m_ObjectHideFlags: 1

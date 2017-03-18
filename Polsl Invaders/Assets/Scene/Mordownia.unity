@@ -204,16 +204,10 @@ MonoBehaviour:
   enemy: {fileID: 1678578080654248, guid: 6fec7cae3993c434a87fab32a21cba9d, type: 2}
   boss: {fileID: 1050650839528252, guid: dc6103798d7cc8744a3b0920a978fac4, type: 2}
   spawnValues: {x: 3, y: 7, z: -2.45}
-  pointsLocation: {x: 0, y: 0, z: 0}
-  nieWiemCoTo:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 2
-    height: 1
-  enemyCount: 10
+  enemyCount: 2
   spawnWait: 1
   spawnStart: 2
+  bossSpawnWait: 5
 --- !u!4 &124066831
 Transform:
   m_ObjectHideFlags: 0
@@ -609,6 +603,7 @@ GameObject:
   - component: {fileID: 2041142575}
   - component: {fileID: 2041142574}
   - component: {fileID: 2041142576}
+  - component: {fileID: 2041142577}
   m_Layer: 0
   m_Name: playerShip
   m_TagString: Untagged
@@ -724,6 +719,18 @@ MonoBehaviour:
     type: 2}
   bulletOffset: {x: 0, y: 0.75, z: 0}
   fireDelay: 0.25
+--- !u!114 &2041142577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041142570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccf82fa41dff45479c8dba11580f5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
 --- !u!1 &2071375352
 GameObject:
   m_ObjectHideFlags: 0

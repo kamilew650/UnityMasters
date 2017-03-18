@@ -26,7 +26,7 @@ public class playerShooting : MonoBehaviour {
             coolDownTimer = fireDelay;
             Vector3 offset = transform.rotation * bulletOffset;
 
-            GameObject Bullet = Instantiate(bulletPrefab, transform.position+offset, transform.rotation);
+            Instantiate(bulletPrefab, transform.position+offset, transform.rotation);
         }
 	
 	}

@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     public int enemyCount;              //ilosc przeciwnikow
     public float spawnWait;             //co ile sie maja pojawiac
     public float spawnStart;            //kiedy ma sie pojawic pierwszy
+    public float bossSpawnWait;
 	void Start () {
         
         StartCoroutine(spawnWaves());
@@ -29,6 +30,7 @@ public class GameController : MonoBehaviour {
             Instantiate(enemy, spawnPosition, spawnRotation);
             yield return new WaitForSeconds(spawnWait);
         }
+        yield return new WaitForSeconds(bossSpawnWait);
         Quaternion spawnRotation2 = new Quaternion(0, 0, -180f, 0);
         Instantiate(boss, new Vector3(0, spawnValues.y, spawnValues.z),  spawnRotation2);
     }
