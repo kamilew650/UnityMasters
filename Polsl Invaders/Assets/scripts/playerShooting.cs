@@ -9,6 +9,16 @@ public class playerShooting : MonoBehaviour {
     public float fireDelay = 0.5f;
     float coolDownTimer = 0;
 
+    public AudioClip shootSound;                //takie tam od dzwieku
+    private AudioSource source;
+    float vol = 0.5f;
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
+
 
     // Use this for initialization
     void Start() {
@@ -23,6 +33,7 @@ public class playerShooting : MonoBehaviour {
 
         if(Input.GetButton("Jump") && coolDownTimer<=0)
         {
+            source.PlayOneShot(shootSound, vol);
             coolDownTimer = fireDelay;
             Vector3 offset = transform.rotation * bulletOffset;
 
