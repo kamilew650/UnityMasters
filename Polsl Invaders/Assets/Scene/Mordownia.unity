@@ -330,7 +330,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a17f2731bfc9f024790e11e5f16e44ee, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -844,6 +844,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   destroySound: {fileID: 8300000, guid: a17f2731bfc9f024790e11e5f16e44ee, type: 3}
+  destroyTime: 0.5
+  coolDownTimer: 0
 --- !u!82 &2041142578
 AudioSource:
   m_ObjectHideFlags: 0
@@ -854,7 +856,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a17f2731bfc9f024790e11e5f16e44ee, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -934,7 +936,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b9e9f966d8fa4ee47a6c68179837fb04, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

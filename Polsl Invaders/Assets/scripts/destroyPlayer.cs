@@ -10,9 +10,16 @@ public class destroyPlayer : MonoBehaviour {
     private AudioSource source;
     float vol = 0.5f;
 
+    public float destroyTime;
+    public float coolDownTimer = 0;
+    bool over = false;
+    bool Visible = true;
+
+
     void Awake()
     {
         source = GetComponent<AudioSource>();
+        coolDownTimer = destroyTime;
     }
 
 
@@ -23,7 +30,6 @@ public class destroyPlayer : MonoBehaviour {
             source.PlayOneShot(destroySound, vol);
             health--;
             Destroy(collider.gameObject);
-            SoundController.add();
 
         }
 
@@ -32,15 +38,29 @@ public class destroyPlayer : MonoBehaviour {
             source.PlayOneShot(destroySound, vol);
             health -= 2;
             Destroy(collider.gameObject);
-            SoundController.destroy1();
         }
 
-        if (health == 0)
+        if (health <= 0)
         {
             source.PlayOneShot(destroySound, vol);
-            Destroy(gameObject);
-            GameController.addPoint();
-            SoundController.destroy1();
+            transform.GetComponent<Renderer>().enabled = false;
+            gameObject.tag = "Untagged";
+            Visible = false;
+            over = true;
         }
     }
+
+    void Update()
+    {
+        if (over == true)
+        {
+            coolDownTimer -= Time.deltaTime;
+        }
+
+        if (coolDownTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
