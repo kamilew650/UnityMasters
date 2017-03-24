@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Mordownia.unity
+- path: Assets/Scene/Menu_Mord.unity
   isLoaded: 1
   isActive: 1
