@@ -30,7 +30,7 @@ public class Boss_Shoot : MonoBehaviour {
 	void Update ()
     {
         coolDownTimer -= Time.deltaTime;
-        if(coolDownTimer<=0)
+        if(coolDownTimer<=0 && transform.GetComponent<Renderer>().enabled != false && Move_Boss.interactive==true)
         {
             source.PlayOneShot(shootSound, vol);
             coolDownTimer = fireDelay;

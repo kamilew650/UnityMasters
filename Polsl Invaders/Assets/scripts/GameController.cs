@@ -12,10 +12,13 @@ public class GameController : MonoBehaviour {
     public float spawnWait;             //co ile sie maja pojawiac
     public float spawnStart;            //kiedy ma sie pojawic pierwszy
     public float bossSpawnWait;
+    public GUIText scoreText;
+
 	void Start () {
         
         StartCoroutine(spawnWaves());
         points = 0;
+        scoreUpdate();
 		
 	}
 
@@ -27,6 +30,7 @@ public class GameController : MonoBehaviour {
         {
             Quaternion spawnRotation = new Quaternion(0, 0, -180f, 0);
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+
             Instantiate(enemy, spawnPosition, spawnRotation);
             yield return new WaitForSeconds(spawnWait);
         }
@@ -35,13 +39,28 @@ public class GameController : MonoBehaviour {
         Instantiate(boss, new Vector3(0, spawnValues.y, spawnValues.z),  spawnRotation2);
     }
 
-    void OnGUI()
+  /*  void OnGUI()
     {
         GUI.Label(new Rect(Vector2.zero, new Vector2(150f, 200f)), points.ToString());
+    }*/
+
+    void scoreUpdate()
+    {
+        scoreText.text = "Score: " + points; 
     }
 
-    public static void addPoint()
+   /* int randomize()
     {
-        points++;
+        Random rnd = new Random.Range();
+    
+        return rnd;
+    }*/
+
+    public void addPoint(int point_value)
+    {
+        points+=point_value;
+        scoreUpdate();
     }
 }
+
+

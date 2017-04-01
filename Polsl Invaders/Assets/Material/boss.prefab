@@ -271,6 +271,8 @@ MonoBehaviour:
   health: 15
   destroySound: {fileID: 8300000, guid: a17f2731bfc9f024790e11e5f16e44ee, type: 3}
   destroyTime: 0.5
+  explosion: {fileID: 1630907304240632, guid: 6a8241695103c834aa7a40299fbbb6d2, type: 2}
+  value: 5
 --- !u!114 &114997993765655198
 MonoBehaviour:
   m_ObjectHideFlags: 1
