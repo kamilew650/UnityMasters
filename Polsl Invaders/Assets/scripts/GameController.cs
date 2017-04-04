@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject enemy;
+    public GameObject enemy;            //zwykli wrogowie
     public GameObject boss;
+    public GameObject meteo;
+    public bool bossAlive;
     public static int points;           //punkty
     public Vector3 spawnValues;
     public int enemyCount;              //ilosc przeciwnikow
@@ -31,18 +33,43 @@ public class GameController : MonoBehaviour {
             Quaternion spawnRotation = new Quaternion(0, 0, -180f, 0);
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 
-            Instantiate(enemy, spawnPosition, spawnRotation);
+            Instantiate(meteo, spawnPosition, spawnRotation);
             yield return new WaitForSeconds(spawnWait);
         }
         yield return new WaitForSeconds(bossSpawnWait);
         Quaternion spawnRotation2 = new Quaternion(0, 0, -180f, 0);
         Instantiate(boss, new Vector3(0, spawnValues.y, spawnValues.z),  spawnRotation2);
+        bossAlive = false;
     }
 
-  /*  void OnGUI()
+    IEnumerator spawnMeteo() //ni mom pojecia czemu funkcja ma taki typ
     {
-        GUI.Label(new Rect(Vector2.zero, new Vector2(150f, 200f)), points.ToString());
-    }*/
+        yield return new WaitForSeconds(spawnStart);
+        int i;
+        for (i = 0; i < enemyCount; i++)
+        {
+            Quaternion spawnRotation = new Quaternion(0, 0, -180f, 0);
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+
+            Instantiate(meteo, spawnPosition, spawnRotation);
+            yield return new WaitForSeconds(spawnWait);
+        }
+    }
+
+
+    void Update()
+    {
+        if(bossAlive == false)
+        {
+            spawnMeteo();
+        }
+    }
+
+
+    /*  void OnGUI()
+      {
+          GUI.Label(new Rect(Vector2.zero, new Vector2(150f, 200f)), points.ToString());
+      }*/
 
     void scoreUpdate()
     {
